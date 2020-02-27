@@ -1,4 +1,5 @@
 import React from 'react';
+import PropType from 'prop-types';
 import { graphql } from 'gatsby';
 
 import Layout from '../components/Layout';
@@ -12,6 +13,10 @@ const IndexPage = ({ data }) => (
   </Layout>
 );
 
+IndexPage.propTypes = {
+  data: PropType.object,
+};
+
 export default IndexPage;
 
 export const query = graphql`
@@ -22,7 +27,7 @@ export const query = graphql`
           frontmatter {
             artwork {
               image {
-                childImageSharp {
+                sharp: childImageSharp {
                   fluid {
                     ...GatsbyImageSharpFluid
                   }
