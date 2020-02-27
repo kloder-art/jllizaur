@@ -3,10 +3,15 @@ import PropTypes from 'prop-types';
 import { useStaticQuery, graphql } from 'gatsby';
 
 import Header from './Header';
+import Container from './Container';
 import '../styles/layout.scss';
 
 const Layout = ({ children }) => {
-  const data = useStaticQuery(graphql`
+  const {
+    site: {
+      siteMetadata: { title },
+    },
+  } = useStaticQuery(graphql`
     query SiteTitleQuery {
       site {
         siteMetadata {
@@ -18,15 +23,13 @@ const Layout = ({ children }) => {
 
   return (
     <>
-      <Header siteTitle={data.site.siteMetadata.title} />
-      <div
-        style={{
-          padding: `0 1.0875rem 1.45rem`,
-        }}
-      >
+      <Header title={title} />
+      <Container>
         <main>{children}</main>
-        <footer>© {new Date().getFullYear()} JLizaur</footer>
-      </div>
+        <footer>
+          © {new Date().getFullYear()} {title}
+        </footer>
+      </Container>
     </>
   );
 };
