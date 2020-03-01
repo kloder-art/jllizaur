@@ -28,8 +28,8 @@ export const query = graphql`
             artwork {
               image {
                 sharp: childImageSharp {
-                  fluid {
-                    ...GatsbyImageSharpFluid
+                  fluid(quality: 80) {
+                    ...GatsbyImageSharpFluid_withWebp
                   }
                 }
               }
