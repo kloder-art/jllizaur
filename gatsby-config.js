@@ -1,7 +1,7 @@
 module.exports = {
   pathPrefix: '/jlizaur',
   siteMetadata: {
-    title: 'JLizaur',
+    title: 'J. L. Lizaur',
     description: 'J. L. Lizaur Artist Portfolio',
     author: 'Javier López Úbeda <jlopezcur@gmail.com>',
   },
