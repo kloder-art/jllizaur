@@ -26,6 +26,12 @@ artwork:
     height: 65
     image: 04.jpg
     year: 2004
+  - title: Teoría y práctica de medidas y pesos en hidráulica moderna
+    technic: Óleo sobre lienzo
+    width: 120
+    height: 60
+    image: 05.jpg
+    year: 2003
 ---
 
 Hubo una vez un líquido imperceptible e ignorado. No olía, no sonaba, era
