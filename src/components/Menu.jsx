@@ -17,6 +17,9 @@ const StyledMenu = styled.ul`
 const Menu = () => (
   <StyledMenu>
     <li>
+      <Link to={'/'}>Inicio</Link>
+    </li>
+    <li>
       <Link to={'/exhibitions'}>Exposiciones</Link>
     </li>
     <li>
