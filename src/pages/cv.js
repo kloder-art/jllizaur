@@ -1,5 +1,4 @@
 import React from 'react';
-import PropType from 'prop-types';
 
 import Layout from '../components/Layout';
 import SEO from '../components/SEO';
@@ -7,7 +6,7 @@ import Container from '../components/Container';
 
 import years from '../../data/static/cv';
 
-const CVPage = ({ data }) => (
+const CVPage = () => (
   <Layout>
     <SEO title={'CV'} />
     <Container>
@@ -32,9 +31,5 @@ const CVPage = ({ data }) => (
     </Container>
   </Layout>
 );
-
-CVPage.propTypes = {
-  data: PropType.object,
-};
 
 export default CVPage;
