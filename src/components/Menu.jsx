@@ -7,7 +7,10 @@ const StyledMenu = styled.ul`
   list-style: none;
   display: flex;
   li {
-    margin-right: 1rem;
+    margin: 0 1rem 0 0;
+  }
+  li:last-child {
+    margin-right: 0;
   }
 `;
 

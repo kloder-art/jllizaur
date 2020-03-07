@@ -5,6 +5,8 @@ import { useStaticQuery, graphql } from 'gatsby';
 import Header from './Header';
 import Footer from './Footer';
 import Container from './Container';
+import Go2Top from './Go2Top';
+
 import '../styles/layout.scss';
 
 const Layout = ({ children }) => {
@@ -27,6 +29,7 @@ const Layout = ({ children }) => {
       <Header title={title} />
       <main>{children}</main>
       <Footer title={title} />
+      <Go2Top />
     </>
   );
 };
