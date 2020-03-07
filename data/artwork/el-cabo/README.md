@@ -1,35 +1,40 @@
 ---
-title: Home
-date: 2020
+title: El Cabo
+date: 2010
 artwork:
   - title: Escullos
     technic: Óleo sobre cartón
-    size: 69.5x32.5
+    width: 69.5
+    height: 32.5
     image: 01.jpg
   - title: Malecon
     technic: Óleo sobre lienzo
-    size: 73x60
+    width: 73
+    height: 60
     image: 02.jpg
   - title: Malecon
     technic: Óleo sobre tabla
-    size: 74.5x76.5
+    width: 74.5
+    height: 76.5
     image: 03.jpg
   - title: Salinas
     technic: Óleo sobre tabla
-    size: 76x45
+    width: 76
+    height: 45
     image: 04.jpg
   - title: Escullos
     technic: Óleo sobre tabla
-    size: 163.5x64
+    width: 163.5
+    height: 64
     image: 05.jpg
   - title: Escullos
     technic: Óleo sobre tabla
-    size: 166.5x113.5
+    width: 166.5
+    height: 113.5
     image: 06.jpg
   - title: Isleta
     technic: Óleo sobre lienzo
-    size: 116x81
+    width: 116
+    height: 81
     image: 07.jpg
 ---
-
-Homepage
