@@ -6,8 +6,11 @@ import Grid from './Grid';
 import Container from '../Container';
 
 const StyledArtwork = styled.div`
-  padding-top: 1rem;
-  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  padding-bottom: 1rem;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  &:last-child {
+    border-bottom: 0px;
+  }
 `;
 
 const Artwork = ({ node }) => (
