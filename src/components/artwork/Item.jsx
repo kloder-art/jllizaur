@@ -41,7 +41,7 @@ const Item = ({
   onClick,
 }) => (
   <StyledItem ratio={image.sharp.fluid.aspectRatio} span={span}>
-    <a href={'#'} onClick={onClick}>
+    <a href={'javascript: void(0);'} onClick={onClick}>
       <Img fluid={image.sharp.fluid} objectFit={'cover'} alt={title} />
     </a>
     <StyledMeta>

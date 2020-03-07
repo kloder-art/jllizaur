@@ -15,14 +15,14 @@ const StyledGrid = styled.div`
 `;
 
 const Grid = ({ items }) => {
-  const [currentImage, setCurrentImage] = useState(0);
+  const [currentImage, setCurrentImage] = useState(-1);
 
   const openLightbox = index => {
     setCurrentImage(index);
   };
 
   const closeLightbox = () => {
-    setCurrentImage(0);
+    setCurrentImage(-1);
   };
 
   const [spanX, spanY] = [
@@ -43,7 +43,7 @@ const Grid = ({ items }) => {
         ))}
       </StyledGrid>
       <ModalGateway>
-        {currentImage > 0 && (
+        {currentImage >= 0 && (
           <Modal onClose={closeLightbox}>
             <Carousel
               currentIndex={currentImage}
