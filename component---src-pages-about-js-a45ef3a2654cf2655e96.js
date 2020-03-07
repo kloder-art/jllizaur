@@ -1,0 +1,2 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[5],{"3XHS":function(e,n,t){"use strict";t.r(n);var a=t("q1tI"),c=t.n(a),r=t("L6Je"),u=t("hYuR");n.default=function(){return c.a.createElement(r.a,null,c.a.createElement(u.a,{title:"Acerca de..."}),c.a.createElement("h1",null,"J. L. Lizaur"))}}}]);
+//# sourceMappingURL=component---src-pages-about-js-a45ef3a2654cf2655e96.js.map
