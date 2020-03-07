@@ -19,7 +19,7 @@ const StyledContact = styled.div`
 
 const ContactPage = () => (
   <Layout>
-    <SEO title={'CV'} />
+    <SEO title={'Contacto'} />
     <Container>
       <StyledContact>
         <div>

@@ -6,7 +6,7 @@ import Container from '../components/Container';
 
 const ContactPage = () => (
   <Layout>
-    <SEO title={'CV'} />
+    <SEO title={'Exposiciones'} />
     <Container>En construcción.</Container>
   </Layout>
 );
