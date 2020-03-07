@@ -23,6 +23,9 @@ const Menu = () => (
       <Link to={'/exhibitions'}>Exposiciones</Link>
     </li>
     <li>
+      <Link to={'/cv'}>CV</Link>
+    </li>
+    <li>
       <Link to={'/contact'}>Contacto</Link>
     </li>
   </StyledMenu>
