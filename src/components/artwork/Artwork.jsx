@@ -7,7 +7,7 @@ import Container from '../Container';
 
 const StyledArtwork = styled.div`
   padding-top: 1rem;
-  border-top: 1px solid rgba(0, 0, 0, 0.8);
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
 `;
 
 const Artwork = ({ node }) => (
