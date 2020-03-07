@@ -25,9 +25,7 @@ const Layout = ({ children }) => {
   return (
     <>
       <Header title={title} />
-      <Container>
-        <main>{children}</main>
-      </Container>
+      <main>{children}</main>
       <Footer title={title} />
     </>
   );
