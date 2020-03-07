@@ -1,8 +1,8 @@
 module.exports = {
   pathPrefix: '/jlizaur',
   siteMetadata: {
-    title: 'J. L. Lizaur',
-    description: 'J. L. Lizaur Artist Portfolio',
+    title: 'Javier López Lizaur',
+    description: 'Javier López Lizaur Artist Portfolio',
     author: 'Javier López Úbeda <jlopezcur@gmail.com>',
   },
   plugins: [
@@ -32,8 +32,8 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-manifest',
       options: {
-        name: 'JLizaur',
-        short_name: 'JLizaur',
+        name: 'J. L. Lizaur',
+        short_name: 'J.L.Lizaur',
         start_url: '/',
         background_color: '#FFFFFF',
         theme_color: '#121212',
