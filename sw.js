@@ -27,20 +27,20 @@ workbox.core.clientsClaim();
  */
 self.__precacheManifest = [
   {
-    "url": "webpack-runtime-9d127779487cbe964702.js"
+    "url": "webpack-runtime-470894bd145fd98c2f01.js"
   },
   {
-    "url": "commons-b0a31bde8abb370d98ad.js"
+    "url": "commons-dc5efc032bdbd2afe948.js"
   },
   {
-    "url": "app-265ac8ec8dfe641c9ba4.js"
+    "url": "app-80bba99b97902411c5e2.js"
   },
   {
     "url": "component---node-modules-gatsby-plugin-offline-app-shell-js-2fb560e943ea9fad2129.js"
   },
   {
     "url": "offline-plugin-app-shell-fallback/index.html",
-    "revision": "2989a5cf462c2e976beec234850f9a01"
+    "revision": "e74ff27fcba7674c2ae45144da934f6b"
   },
   {
     "url": "google-fonts/s/lato/v16/S6uyw4BMUTPHjx4wXg.woff2",
@@ -52,7 +52,7 @@ self.__precacheManifest = [
   },
   {
     "url": "page-data/app-data.json",
-    "revision": "b4c9505799d694ff51f664dd571fab36"
+    "revision": "421e5002d73da09b0b51a8ebb1658045"
   },
   {
     "url": "manifest.webmanifest",
@@ -149,7 +149,7 @@ const navigationRoute = new NavigationRoute(async ({ event }) => {
   // Check for resources + the app bundle
   // The latter may not exist if the SW is updating to a new version
   const resources = await idbKeyval.get(`resources:${pathname}`)
-  if (!resources || !(await caches.match(`/jlizaur/app-265ac8ec8dfe641c9ba4.js`))) {
+  if (!resources || !(await caches.match(`/jlizaur/app-80bba99b97902411c5e2.js`))) {
     return await fetch(event.request)
   }
 
