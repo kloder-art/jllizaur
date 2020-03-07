@@ -3,15 +3,12 @@ import PropType from 'prop-types';
 import styled from 'styled-components';
 import Img from 'gatsby-image/withIEPolyfill';
 
-const getColSpan = (r, min) => (r >= 1 ? Math.min(Math.round(r), min) : 1);
-const getRowSpan = (r, min) => (r < 1 ? Math.min(Math.round(1 / r), min) : 1);
-
 const StyledItem = styled.div`
-  grid-row-end: span ${({ ratio }) => getRowSpan(ratio, Infinity)};
-  grid-column-end: span ${({ ratio }) => getColSpan(ratio, Infinity)};
+  grid-row-end: span ${({ span }) => span[1]};
+  grid-column-end: span ${({ span }) => span[0]};
   @media (max-width: 726px) {
     & {
-      grid-column-end: span ${({ ratio }) => getColSpan(ratio, 2)};
+      grid-column-end: span ${({ span }) => (span[0] > 2 ? 2 : span[0])};
     }
   }
   @media (max-width: 490px) {
@@ -21,16 +18,51 @@ const StyledItem = styled.div`
   }
 `;
 
-const Item = ({ image, title }) => (
-  <StyledItem ratio={image.sharp.fluid.aspectRatio}>
-    {console.log(image.sharp.fluid.aspectRatio)}
-    <Img fluid={image.sharp.fluid} objectFit={'cover'} alt={title} />
+const StyledMeta = styled.div`
+  margin: 0.7rem auto 0;
+  width: fit-content;
+  h3 {
+    font-size: 12px;
+    margin: 0;
+  }
+  p {
+    font-size: 12px;
+  }
+`;
+
+const Item = ({
+  image,
+  title,
+  technic,
+  year,
+  span,
+  width,
+  height,
+  onClick,
+}) => (
+  <StyledItem ratio={image.sharp.fluid.aspectRatio} span={span}>
+    <a href={'#'} onClick={onClick}>
+      <Img fluid={image.sharp.fluid} objectFit={'cover'} alt={title} />
+    </a>
+    <StyledMeta>
+      <h3>{title}</h3>
+      <p>
+        {`${width}x${height}`}. {technic}. {year}
+      </p>
+    </StyledMeta>
   </StyledItem>
 );
 
 Item.propTypes = {
   image: PropType.object,
   title: PropType.string,
+  technic: PropType.string,
+  year: PropType.number,
+  size: PropType.string,
+  onClick: PropType.func,
+  width: PropType.number,
+  height: PropType.number,
+  span: PropType.array,
 };
 
 export default Item;

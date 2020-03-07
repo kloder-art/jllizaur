@@ -4,12 +4,14 @@ import { graphql } from 'gatsby';
 
 import Layout from '../components/Layout';
 import SEO from '../components/SEO';
-import Grid from '../components/artwork/Grid';
+import Artwork from '../components/artwork/Artwork';
 
 const IndexPage = ({ data }) => (
   <Layout>
-    <SEO title="Inicio" />
-    <Grid items={data.allMarkdownRemark.edges[0].node.frontmatter.artwork} />
+    <SEO title={'Inicio'} home={true} />
+    {data.allMarkdownRemark.edges.map((x, idx) => (
+      <Artwork key={idx} {...x} />
+    ))}
   </Layout>
 );
 
@@ -24,15 +26,25 @@ export const query = graphql`
     allMarkdownRemark {
       edges {
         node {
+          html
           frontmatter {
+            title
             artwork {
               image {
                 sharp: childImageSharp {
                   fluid(quality: 80) {
                     ...GatsbyImageSharpFluid_withWebp
                   }
+                  original {
+                    src
+                  }
                 }
               }
+              title
+              year
+              width
+              height
+              technic
             }
           }
         }
