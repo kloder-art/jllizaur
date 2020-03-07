@@ -1,0 +1,2 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[7],{R94Z:function(e,n,t){"use strict";t.r(n);var a=t("q1tI"),c=t.n(a),u=t("L6Je"),l=t("hYuR"),r=t("wcCm");n.default=function(){return c.a.createElement(u.a,null,c.a.createElement(l.a,{title:"CV"}),c.a.createElement(r.a,null,"En construcción."))}}}]);
+//# sourceMappingURL=component---src-pages-exhibitions-js-70580acbf509b6d71179.js.map
