@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import PropType from 'prop-types';
+import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import Carousel, { Modal, ModalGateway } from 'react-images';
 
@@ -59,7 +59,7 @@ const Grid = ({ items }) => {
 };
 
 Grid.propTypes = {
-  items: PropType.array,
+  items: PropTypes.array,
 };
 
 export default Grid;

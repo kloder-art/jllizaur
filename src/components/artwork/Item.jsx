@@ -1,5 +1,5 @@
 import React from 'react';
-import PropType from 'prop-types';
+import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import Img from 'gatsby-image/withIEPolyfill';
 
@@ -54,15 +54,15 @@ const Item = ({
 );
 
 Item.propTypes = {
-  image: PropType.object,
-  title: PropType.string,
-  technic: PropType.string,
-  year: PropType.number,
-  size: PropType.string,
-  onClick: PropType.func,
-  width: PropType.number,
-  height: PropType.number,
-  span: PropType.array,
+  image: PropTypes.object,
+  title: PropTypes.string,
+  technic: PropTypes.string,
+  year: PropTypes.number,
+  size: PropTypes.string,
+  onClick: PropTypes.func,
+  width: PropTypes.number,
+  height: PropTypes.number,
+  span: PropTypes.array,
 };
 
 export default Item;

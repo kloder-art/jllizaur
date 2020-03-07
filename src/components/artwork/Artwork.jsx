@@ -1,5 +1,5 @@
 import React from 'react';
-import PropType from 'prop-types';
+import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
 import Grid from './Grid';
@@ -30,7 +30,7 @@ const Artwork = ({ node }) => (
 );
 
 Artwork.propTypes = {
-  node: PropType.object,
+  node: PropTypes.object,
 };
 
 export default Artwork;
