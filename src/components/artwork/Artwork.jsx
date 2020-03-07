@@ -13,7 +13,7 @@ const StyledArtwork = styled.div`
   }
 `;
 
-const Artwork = ({ node }) => (
+const Artwork = ({ node: { childMarkdownRemark: node } }) => (
   <StyledArtwork>
     <Container>
       <h2>{node.frontmatter.title}</h2>

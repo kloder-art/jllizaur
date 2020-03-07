@@ -6,10 +6,14 @@ import Layout from '../components/Layout';
 import SEO from '../components/SEO';
 import Artwork from '../components/artwork/Artwork';
 
-const IndexPage = ({ data }) => (
+const IndexPage = ({
+  data: {
+    allFile: { edges },
+  },
+}) => (
   <Layout>
     <SEO title={'Inicio'} home={true} />
-    {data.allMarkdownRemark.edges.map((x, idx) => (
+    {edges.map((x, idx) => (
       <Artwork key={idx} {...x} />
     ))}
   </Layout>
@@ -23,28 +27,32 @@ export default IndexPage;
 
 export const query = graphql`
   query {
-    allMarkdownRemark {
+    allFile(
+      filter: { sourceInstanceName: { eq: "artwork" }, extension: { eq: "md" } }
+    ) {
       edges {
         node {
-          html
-          frontmatter {
-            title
-            artwork {
-              image {
-                sharp: childImageSharp {
-                  fluid(quality: 80) {
-                    ...GatsbyImageSharpFluid_withWebp
-                  }
-                  original {
-                    src
+          childMarkdownRemark {
+            html
+            frontmatter {
+              title
+              artwork {
+                image {
+                  sharp: childImageSharp {
+                    fluid(quality: 80) {
+                      ...GatsbyImageSharpFluid_withWebp
+                    }
+                    original {
+                      src
+                    }
                   }
                 }
+                title
+                year
+                width
+                height
+                technic
               }
-              title
-              year
-              width
-              height
-              technic
             }
           }
         }
