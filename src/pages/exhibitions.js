@@ -33,6 +33,7 @@ export const query = graphql`
         sourceInstanceName: { eq: "exhibition" }
         extension: { eq: "md" }
       }
+      sort: { fields: childMarkdownRemark___frontmatter___year, order: DESC }
     ) {
       edges {
         node {
