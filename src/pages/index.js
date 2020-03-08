@@ -29,6 +29,7 @@ export const query = graphql`
   query {
     allFile(
       filter: { sourceInstanceName: { eq: "artwork" }, extension: { eq: "md" } }
+      sort: { fields: childMarkdownRemark___frontmatter___year, order: DESC }
     ) {
       edges {
         node {
