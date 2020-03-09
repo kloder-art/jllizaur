@@ -19,8 +19,8 @@ artwork:
     image: 03.jpg
   - title: Salinas
     technic: Óleo sobre tabla
-    width: 76
-    height: 45
+    width: 45
+    height: 76
     image: 04.jpg
   - title: Escullos
     technic: Óleo sobre tabla
