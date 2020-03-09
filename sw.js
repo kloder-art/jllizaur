@@ -27,20 +27,20 @@ workbox.core.clientsClaim();
  */
 self.__precacheManifest = [
   {
-    "url": "webpack-runtime-0623768a273305e5f7c1.js"
+    "url": "webpack-runtime-278e0675744fd585b4b2.js"
   },
   {
-    "url": "commons-dc5efc032bdbd2afe948.js"
+    "url": "commons-8c8055fdcffe9c3c4d24.js"
   },
   {
-    "url": "app-a7a4dffd4192804f5ee9.js"
+    "url": "app-8f0130661481257d61cb.js"
   },
   {
     "url": "component---node-modules-gatsby-plugin-offline-app-shell-js-2fb560e943ea9fad2129.js"
   },
   {
     "url": "offline-plugin-app-shell-fallback/index.html",
-    "revision": "b6dd46191367c5e6dfd1db61c991094f"
+    "revision": "a585863d7f8ba4ded8465b2adfb7462e"
   },
   {
     "url": "google-fonts/s/lato/v16/S6uyw4BMUTPHjx4wXg.woff2",
@@ -52,11 +52,11 @@ self.__precacheManifest = [
   },
   {
     "url": "page-data/app-data.json",
-    "revision": "b19e22b3449e74395e48809cf9899292"
+    "revision": "96d9b76c6bc285d838a7f0ae212a34b6"
   },
   {
     "url": "manifest.webmanifest",
-    "revision": "6c6150a18e5e83582f24de6136f4cc67"
+    "revision": "2f1370e146d7de6189f7673859b8d9bb"
   }
 ].concat(self.__precacheManifest || []);
 workbox.precaching.precacheAndRoute(self.__precacheManifest, {});
@@ -149,7 +149,7 @@ const navigationRoute = new NavigationRoute(async ({ event }) => {
   // Check for resources + the app bundle
   // The latter may not exist if the SW is updating to a new version
   const resources = await idbKeyval.get(`resources:${pathname}`)
-  if (!resources || !(await caches.match(`/jlizaur/app-a7a4dffd4192804f5ee9.js`))) {
+  if (!resources || !(await caches.match(`/jlizaur/app-8f0130661481257d61cb.js`))) {
     return await fetch(event.request)
   }
 
