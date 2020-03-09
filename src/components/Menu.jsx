@@ -8,6 +8,9 @@ const StyledMenu = styled.ul`
   display: flex;
   li {
     margin: 0 1rem 0 0;
+    a {
+      padding: 1rem 0;
+    }
   }
   li:last-child {
     margin-right: 0;
