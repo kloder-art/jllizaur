@@ -2,36 +2,24 @@
 title: El principio de Arquímedes
 date: 2004
 artwork:
-  - title: Línea de flotación II
-    technic: Óleo sobre tabla
-    width: 122
-    height: 100
-    image: 01.jpg
-    year: 2000
-  - title: Bañista
-    technic: Óleo sobre tabla
-    width: 41
-    height: 61
-    image: 02.jpg
-    year: 1998
-  - title: De los tres elementos nace el fuego
-    technic: Óleo sobre lienzo
-    width: 130
-    height: 130
-    image: 03.jpg
-    year: 2004
-  - title: El principio de Arquímedes
-    technic: Óleo sobre tabla
-    width: 61
-    height: 65
-    image: 04.jpg
-    year: 2004
   - title: Teoría y práctica de medidas y pesos en hidráulica moderna
     technic: Óleo sobre lienzo
     width: 120
     height: 60
     image: 05.jpg
     year: 2003
+  - title: El principio de Arquímedes
+    technic: Óleo sobre tabla
+    width: 61
+    height: 65
+    image: 04.jpg
+    year: 2004
+  - title: De los tres elementos nace el fuego
+    technic: Óleo sobre lienzo
+    width: 130
+    height: 130
+    image: 03.jpg
+    year: 2004
   - title: Los cuatro elementos
     technic: Óleo sobre lienzo
     width: 151
@@ -49,6 +37,12 @@ artwork:
     width: 122
     height: 100
     image: 08.jpg
+    year: 2000
+  - title: Línea de flotación II
+    technic: Óleo sobre tabla
+    width: 122
+    height: 100
+    image: 01.jpg
     year: 2000
   - title: A vista de pez
     technic: Óleo sobre lienzo
@@ -115,6 +109,12 @@ artwork:
     height: 122
     image: 19.jpg
     year: 2004
+  - title: Bañista
+    technic: Óleo sobre tabla
+    width: 41
+    height: 61
+    image: 02.jpg
+    year: 1998
   - title: '- Sin título ? -'
     technic: '-'
     width: 81
