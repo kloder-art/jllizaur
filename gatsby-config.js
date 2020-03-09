@@ -3,6 +3,7 @@ module.exports = {
     title: 'Javier López Lizaur',
     description: 'Javier López Lizaur Artist Portfolio',
     author: 'Javier López Úbeda <jlopezcur@gmail.com>',
+    siteUrl: 'https://jllizaur.art',
   },
   plugins: [
     '@rhysforyou/gatsby-plugin-react-helmet-async',
@@ -48,6 +49,7 @@ module.exports = {
       },
     },
     'gatsby-plugin-offline',
+    'gatsby-plugin-sitemap',
     {
       resolve: 'gatsby-plugin-google-analytics',
       options: {
