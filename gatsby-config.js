@@ -1,5 +1,4 @@
 module.exports = {
-  pathPrefix: '/jlizaur',
   siteMetadata: {
     title: 'Javier López Lizaur',
     description: 'Javier López Lizaur Artist Portfolio',
