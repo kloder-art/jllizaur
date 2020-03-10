@@ -40,7 +40,7 @@ self.__precacheManifest = [
   },
   {
     "url": "offline-plugin-app-shell-fallback/index.html",
-    "revision": "0a7a97809d74648ae39cbf597f0e7d2e"
+    "revision": "2d434ebbbeefee7a4fd7744adacac82c"
   },
   {
     "url": "google-fonts/s/lato/v16/S6uyw4BMUTPHjx4wXg.woff2",
