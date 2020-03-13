@@ -1,126 +1,114 @@
 ---
 title: El principio de Arquímedes
-date: 2004
 artwork:
   - title: Teoría y práctica de medidas y pesos en hidráulica moderna
+    image: teoria-y-practica-de-medidas-y-pesos-en-hidraulica-moderna_oleo-sobre-lienzo_120x60_2003.jpg
     technic: Óleo sobre lienzo
     width: 120
     height: 60
-    image: 05.jpg
     year: 2003
   - title: El principio de Arquímedes
+    image: el-principio-de-arquimedes_oleo-sobre-tabla_61x65_2004.jpg
     technic: Óleo sobre tabla
     width: 61
     height: 65
-    image: 04.jpg
     year: 2004
   - title: De los tres elementos nace el fuego
+    image: de-los-tres-elementos-nace-el-fuego_oleo-sobre-lienzo_130x130_2004.jpg
     technic: Óleo sobre lienzo
     width: 130
     height: 130
-    image: 03.jpg
     year: 2004
   - title: Los cuatro elementos
+    image: los-cuatro-elementos_oleo-sobre-lienzo_151x151_2003.jpg
     technic: Óleo sobre lienzo
     width: 151
     height: 151
-    image: 06.jpg
     year: 2003
   - title: Caravaggio en una piscina
+    image: caravaggio-en-una-piscina_oleo-sobre-lienzo_100x81_2004.jpg
     technic: Óleo sobre lienzo
     width: 100
     height: 81
-    image: 07.jpg
     year: 2004
   - title: Línea de flotación I
+    image: linea-de-flotacion-i_oleo-sobre-tabla_122x100_2000.jpg
     technic: Óleo sobre tabla
     width: 122
     height: 100
-    image: 08.jpg
     year: 2000
   - title: Línea de flotación II
+    image: linea-de-flotacion-ii_oleo-sobre-tabla_122x100_2000.jpg
     technic: Óleo sobre tabla
     width: 122
     height: 100
-    image: 01.jpg
     year: 2000
   - title: A vista de pez
+    image: a-vista-de-pez_oleo-sobre-lienzo_73x60_2000.jpg
     technic: Óleo sobre lienzo
     width: 73
     height: 60
-    image: 09.jpg
     year: 2000
   - title: Bañistas
+    image: banistas_oleo-sobre-tabla_101x70_1993.jpg
     technic: Óleo sobre tabla
     width: 101
     height: 70
-    image: 10.jpg
+    year: 1993
   - title: Profundidad
+    image: profundidad_oleo-sobre-tabla_95.5x64_1999.jpg
     technic: Óleo sobre tabla
     width: 95.5
     height: 64
-    image: 11.jpg
     year: 1999
   - title: Reflexión
+    image: reflexion_oleo-sobre-tabla_39x92.5_2003.jpg
     technic: Óleo sobre tabla
     width: 39
     height: 92.5
-    image: 12.jpg
     year: 2003
   - title: Refracción
+    image: refraccion_oleo-sobre-tabla_39x92.5_2003.jpg
     technic: Óleo sobre tabla
     width: 39
     height: 92.5
-    image: 13.jpg
     year: 2003
   - title: Aproximación a la vida sexual del erizo de mar I
+    image: aproximacion-a-la-vida-sexual-del-erizo-de-mar-i_oleo-sobre-carton_68x99_2003.jpg
     technic: Óleo sobre cartón
     width: 68
     height: 99
-    image: 14.jpg
     year: 2003
   - title: Aproximación a la vida sexual del erizo de mar II
+    image: aproximacion-a-la-vida-sexual-del-erizo-de-mar-ii_oleo-sobre-carton_61x98_2003.jpg
     technic: Óleo sobre cartón
     width: 61
     height: 98
-    image: 15.jpg
-    year: 2003
-  - title: Un principio (Tríptico)
-    technic: Óleo sobre cartón
-    width: 25.5
-    height: 30.5
-    image: 16.jpg
-    year: 2002
-  - title: Otro principio (Díptico)
-    technic: Óleo sobre lienzo
-    width: 40
-    height: 40
-    image: 17.jpg
     year: 2003
   - title: Inmersión I
+    image: inmersion-i_oleo-sobre-tabla_26.5x69_2002.jpg
     technic: Óleo sobre tabla
     width: 26.5
     height: 69
-    image: 18.jpg
     year: 2002
   - title: Inmersión II
+    image: inmersion-ii_oleo-sobre-tabla_81x122_2004.jpg
     technic: Óleo sobre tabla
     width: 81
     height: 122
-    image: 19.jpg
     year: 2004
   - title: Bañista
+    image: banista_oleo-sobre-tabla_41x61_1998.jpg
     technic: Óleo sobre tabla
     width: 41
     height: 61
-    image: 02.jpg
     year: 1998
-  - title: '- Sin título ? -'
-    technic: '-'
-    width: 81
-    height: 122
-    image: 20.jpg
-    year: 2000
+  - title: Rocas ergonomicas I
+    image: rocas-ergonomicas-i_oleo-sobre-lienzo_130x130_2002.jpg
+    technic: Oleo sobre lienzo
+    width: 130
+    height: 130
+    year: 2002
 ---
 
 Hubo una vez un líquido imperceptible e ignorado. No olía, no sonaba, era

@@ -40,14 +40,15 @@ const Item = ({
   height,
   onClick,
 }) => (
-  <StyledItem ratio={image.sharp.fluid.aspectRatio} span={span}>
+  <StyledItem span={span}>
     <a href={'javascript: void(0);'} onClick={onClick}>
       <Img fluid={image.sharp.fluid} objectFit={'cover'} alt={title} />
     </a>
     <StyledMeta>
       <h3>{title}</h3>
       <p>
-        {`${width}x${height}`}. {technic}. {year}
+        {width != null && height != null && `${width}x${height}. `}
+        {technic}. {year}
       </p>
     </StyledMeta>
   </StyledItem>
