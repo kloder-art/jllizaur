@@ -6,6 +6,8 @@ import Layout from '../components/Layout';
 import SEO from '../components/SEO';
 import Artwork from '../components/artwork/Artwork';
 
+import order from '../../data/artwork/order';
+
 const IndexPage = ({
   data: {
     allFile: { edges },
@@ -13,9 +15,14 @@ const IndexPage = ({
 }) => (
   <Layout>
     <SEO title={'Inicio'} home={true} />
-    {edges.map((x, idx) => (
-      <Artwork key={idx} {...x} />
-    ))}
+    {order
+      .map(x =>
+        edges.find(y => y.node.childMarkdownRemark.frontmatter.id === x)
+      )
+      .filter(x => !!x)
+      .map((x, idx) => (
+        <Artwork key={idx} {...x} />
+      ))}
   </Layout>
 );
 
@@ -36,6 +43,7 @@ export const query = graphql`
           childMarkdownRemark {
             html
             frontmatter {
+              id
               title
               artwork {
                 image {

@@ -1,4 +1,5 @@
 ---
+id: el-cabo
 title: El Cabo
 artwork:
   - title: Escullos I

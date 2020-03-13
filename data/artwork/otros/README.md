@@ -1,4 +1,5 @@
 ---
+id: otros
 title: Otros
 artwork:
   - title: Introspección

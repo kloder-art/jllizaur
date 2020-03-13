@@ -1,4 +1,5 @@
 ---
+id: el-principio-de-arquimedes
 title: El principio de Arquímedes
 artwork:
   - title: Teoría y práctica de medidas y pesos en hidráulica moderna
