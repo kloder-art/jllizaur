@@ -1,10 +1,11 @@
 import React from 'react';
 import styled from 'styled-components';
-import { FaInstagram } from 'react-icons/fa';
+import { FaInstagram, FaGlobe, FaFacebook, FaFacebookF } from 'react-icons/fa';
 
 import Layout from '../components/Layout';
 import SEO from '../components/SEO';
 import Container from '../components/Container';
+import ExternalLink from '../components/ExternalLink';
 
 const StyledContact = styled.div`
   display: grid;
@@ -44,22 +45,22 @@ const ContactPage = () => (
               Estudio (Javier López Lizaur Academia)
             </span>
             <p>
-              <a
-                href={'https://www.instagram.com/jllizauracademia/'}
-                rel={'noopener noreferrer'}
-                target={'_blank'}
-              >
+              <ExternalLink href="https://www.instagram.com/jllizauracademia/">
                 <FaInstagram />
-              </a>
+              </ExternalLink>
+              &nbsp;
+              <ExternalLink href="https://www.facebook.com/AtcAcademiaArte">
+                <FaFacebookF />
+              </ExternalLink>
+              &nbsp;
+              <ExternalLink href="https://academia.jllizaur.art">
+                <FaGlobe />
+              </ExternalLink>
             </p>
             <p>
-              <a
-                href="https://goo.gl/maps/cS2BXf6Pmno"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
+              <ExternalLink href="https://goo.gl/maps/cS2BXf6Pmno">
                 C/ Altamira, 54. Bajo, dx. 04005. Almería. España.
-              </a>
+              </ExternalLink>
             </p>
           </StyledBlock>
           <StyledBlock>
@@ -70,7 +71,7 @@ const ContactPage = () => (
           </StyledBlock>
           <StyledBlock>
             <span className="title">Teléfono</span>
-            <a href="tel:670653878">670 88 44 15</a>
+            <a href="tel:+34670653878">+34 670 88 44 15</a>
           </StyledBlock>
         </div>
         <div>
