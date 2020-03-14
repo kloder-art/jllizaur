@@ -16,6 +16,9 @@ const StyledItem = styled.div`
       grid-column-end: span 1;
     }
   }
+  a {
+    cursor: pointer;
+  }
 `;
 
 const StyledMeta = styled.div`
@@ -41,7 +44,7 @@ const Item = ({
   onClick,
 }) => (
   <StyledItem span={span}>
-    <a href={'javascript: void(0);'} onClick={onClick}>
+    <a role={'button'} onClick={onClick}>
       <Img fluid={image.sharp.fluid} objectFit={'cover'} alt={title} />
     </a>
     <StyledMeta>

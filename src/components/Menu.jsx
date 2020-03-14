@@ -23,7 +23,7 @@ const Menu = () => (
       <Link to={'/'}>Inicio</Link>
     </li>
     <li>
-      <Link to={'/exhibitions'}>Exposiciones</Link>
+      <Link to={'/press'}>Prensa</Link>
     </li>
     <li>
       <Link to={'/cv'}>CV</Link>

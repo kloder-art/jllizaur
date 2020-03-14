@@ -6,12 +6,12 @@ import Carousel, { Modal, ModalGateway } from 'react-images';
 import Item from './Item';
 
 const StyledGrid = styled.div`
+  margin: 2rem 0;
   display: grid;
-  grid-gap: 2rem;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-  grid-auto-flow: row dense;
-  // align-items: center;
-  // justify-content: center;
+  grid-gap: 1rem;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  align-items: center;
+  justify-content: center;
 `;
 
 const Grid = ({ items }) => {
@@ -25,21 +25,12 @@ const Grid = ({ items }) => {
     setCurrentImage(-1);
   };
 
-  const [spanX, spanY] = [
-    Math.max(...items.map(x => parseFloat(x.width))) / 3,
-    Math.max(...items.map(x => parseFloat(x.height))) / 2,
-  ];
-
+  console.log(items);
   return (
     <>
       <StyledGrid>
         {items.map((x, idx) => (
-          <Item
-            key={idx}
-            {...x}
-            span={[Math.round(x.width / spanX), Math.round(x.height / spanY)]}
-            onClick={() => openLightbox(idx)}
-          />
+          <Item key={idx} onClick={() => openLightbox(idx)} {...x} />
         ))}
       </StyledGrid>
       <ModalGateway>
