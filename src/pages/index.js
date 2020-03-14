@@ -51,9 +51,6 @@ export const query = graphql`
                     fluid(quality: 80) {
                       ...GatsbyImageSharpFluid_withWebp
                     }
-                    original {
-                      src
-                    }
                   }
                 }
                 title
