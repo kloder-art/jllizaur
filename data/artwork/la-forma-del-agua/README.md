@@ -1,6 +1,7 @@
 ---
 id: la-forma-del-agua
 title: La forma del agua
+order: 3
 artwork:
   - title: Manantial
     image: manantial_oleo-sobre-lienzo_60x120_2004.jpg

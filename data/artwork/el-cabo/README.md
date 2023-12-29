@@ -1,6 +1,7 @@
 ---
 id: el-cabo
 title: El Cabo
+order: 1
 artwork:
   - title: Escullos I
     image: escullos-i_oleo-sobre-carton_69.5x32.5_2007.jpg

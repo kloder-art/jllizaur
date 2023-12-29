@@ -1,6 +1,7 @@
 ---
 id: otros
 title: Otros
+order: 3
 artwork:
   - title: Introspección
     image: introspeccion_oleo-sobre-tabla_150x150_1990.jpg

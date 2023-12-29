@@ -1,28 +1,15 @@
 module.exports = {
-  root: true,
-  env: {
-    jest: true
-  },
   globals: {
-    page: true,
-    browser: true,
-    context: true
+    graphql: true,
+    __PATH_PREFIX__: true,
   },
-  extends: [
-    'plugin:jest/recommended',
-    'plugin:react/recommended'
-  ],
-  settings: {
-    react: {
-      version: '16.8'
-    }
-  },
+  extends: 'react-app',
   rules: {
     quotes: ['error', 'single'],
-    semi: 'error'
+    semi: [2, 'always'],
+    curly: 'error',
+    'no-eval': 'error',
+    'no-alert': 'error',
+    'no-console': ['error', { allow: ['error'] }],
   },
-  parserOptions: {
-    ecmaVersion: 6,
-    sourceType: 'module'
-  }
 };
