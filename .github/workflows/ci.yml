@@ -1,17 +1,18 @@
 name: Build and deploy
 
+on:
+  push:
+    branches: [$default-branch]
+  workflow_dispatch:
+
 permissions:
   contents: read
   id-token: write
   pages: write
 
-on:
-  push:
-    branches:
-      - master
-
-env:
-  GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
+concurrency:
+  group: 'pages'
+  cancel-in-progress: false
 
 jobs:
   build:
@@ -20,65 +21,38 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Cache node modules
-        id: cache-npm
-        uses: actions/cache@v3
-        env:
-          cache-name: cache-node-modules
-        with:
-          path: |
-            node_modules
-            ~/.npm
-            public
-          key: ${{ runner.os }}-prepare-${{ env.cache-name }}-${{ github.sha }}
-
       - name: Setup node 20.x
         uses: actions/setup-node@v4
         with:
           node-version: 20.x
 
-      - name: Install
+      - name: Setup Pages
+        uses: actions/configure-pages@v4
+
+      - name: Restore cache
+        uses: actions/cache@v3
+        with:
+          path: |
+            public
+            .cache
+          key: ${{ runner.os }}-gatsby-build-${{ hashFiles('public') }}
+          restore-keys: |
+            ${{ runner.os }}-gatsby-build-
+
+      - name: Install dependencies
         run: npm ci
 
       - name: Build
-        if: success()
         run: npm run build
 
   deploy:
-    needs: [build]
-    if: github.ref == 'refs/heads/master'
+    needs: build
     runs-on: ubuntu-latest
-
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
 
     steps:
-      - name: Checkout
-        uses: actions/checkout@v4
-
-      - name: Use node modules cache
-        id: cache-npm
-        uses: actions/cache@v3
-        env:
-          cache-name: cache-node-modules
-        with:
-          path: |
-            node_modules
-            ~/.npm
-            public
-          key: ${{ runner.os }}-prepare-${{ env.cache-name }}-${{ github.sha }}
-
-      - name: Setup Pages
-        uses: actions/configure-pages@v4
-
-      - name: Upload artifact
-        if: success()
-        uses: actions/upload-pages-artifact@v3
-        with:
-          path: './public'
-
       - name: Deploy to GitHub Pages
-        if: success()
         id: deployment
         uses: actions/deploy-pages@v4
