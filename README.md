@@ -4,5 +4,5 @@
 
 ```sh
 npm ci
-gatsby develop
+npm start
 ```
