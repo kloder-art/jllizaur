@@ -12,3 +12,4 @@ export * from './Layout';
 export * from './Menu';
 export * from './SEO';
 export * from './Section';
+export * from './VirtualGallery';
