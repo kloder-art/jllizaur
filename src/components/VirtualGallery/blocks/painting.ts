@@ -1,7 +1,6 @@
 import * as THREE from 'three';
 import { IGatsbyImageData, getSrc } from 'gatsby-plugin-image';
 
-import { galleryMap } from '../galleryMap';
 import { makeLabelCanvas } from './label';
 
 type Params = {
@@ -35,8 +34,9 @@ export const getPainting = ({
   const material = new THREE.MeshBasicMaterial({ map: texture });
   const mesh = new THREE.Mesh(geometry, material);
 
-  mesh.position.x = galleryMap[title].position.x;
-  mesh.position.z = galleryMap[title].position.z + 0.5;
+  // mesh.position.x = galleryMap[title].position.x;
+  // mesh.position.z = galleryMap[title].position.z + 0.5;
+  // mesh.rotation.y = galleryMap[title].rotation;
 
   group.add(mesh);
 
@@ -51,21 +51,19 @@ export const getPainting = ({
   const rightGeom = leftGeom.clone();
   const up = new THREE.Mesh(upGeom, sideMaterial);
   up.rotation.x = Math.PI / 2;
-  up.position.x = galleryMap[title].position.x;
   up.position.y = -height / 2;
   group.add(up);
   const down = new THREE.Mesh(downGeom, sideMaterial);
   down.rotation.x = -Math.PI / 2;
-  down.position.x = galleryMap[title].position.x;
   down.position.y = height / 2;
   group.add(down);
   const left = new THREE.Mesh(leftGeom, sideMaterial);
   left.rotation.y = -Math.PI / 2;
-  left.position.x = galleryMap[title].position.x - width / 2;
+  left.position.x = -width / 2;
   group.add(left);
   const right = new THREE.Mesh(rightGeom, sideMaterial);
   right.rotation.y = Math.PI / 2;
-  right.position.x = galleryMap[title].position.x + width / 2;
+  right.position.x = width / 2;
   group.add(right);
 
   // Text
@@ -91,11 +89,7 @@ export const getPainting = ({
   const label = new THREE.Mesh(labelGeometry, labelMaterial);
 
   label.position.y = -(height / 2) - 5 - label.geometry.parameters.height / 2;
-  label.position.x =
-    galleryMap[title].position.x -
-    width / 2 +
-    label.geometry.parameters.width / 2;
-  label.position.z = galleryMap[title].position.z;
+  label.position.x = -width / 2 + label.geometry.parameters.width / 2;
 
   group.add(label);
 

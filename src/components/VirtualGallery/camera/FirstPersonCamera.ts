@@ -23,6 +23,22 @@ export class FirstPersonCamera {
     this.headBobActive_ = false;
     this.headBobTimer_ = 0;
     this.objects_ = objects;
+
+    addEventListener('deviceorientation', this.setOrientationControls, true);
+  }
+
+  setOrientationControls(e) {
+    if (!e.alpha) {
+      return;
+    }
+    const controls = new THREE.DeviceOrientationControls(camera, true);
+    controls.connect();
+    controls.update();
+    window.removeEventListener(
+      'deviceorientation',
+      this.setOrientationControls,
+      true,
+    );
   }
 
   update(timeElapsedS) {

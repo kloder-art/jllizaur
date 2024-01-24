@@ -27,7 +27,7 @@ export const useFullscreen = ({ startAsFullscreen = false }: Props = {}) => {
     if (document) {
       if (fullscreen) {
         document.documentElement.requestFullscreen();
-      } else {
+      } else if (document.fullscreenElement !== null) {
         document.exitFullscreen();
       }
     }

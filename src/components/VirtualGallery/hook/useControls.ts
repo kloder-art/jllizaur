@@ -17,13 +17,6 @@ export const useControls = ({ camera, renderer }: Props) => {
   const clock = React.useMemo(() => new THREE.Clock(), []);
   const controls = React.useMemo(() => {
     const fpc = new FirstPersonCamera(camera, renderer.domElement);
-    // fpc.
-    // const fpc = new FirstPersonControls(camera, renderer.domElement);
-    // fpc.lookSpeed = 0.1;
-    // fpc.movementSpeed = 100;
-    // fpc.constrainVertical = true;
-    // fpc.verticalMin = 0;
-    // fpc.verticalMax = Math.PI;
     return fpc;
   }, []);
 

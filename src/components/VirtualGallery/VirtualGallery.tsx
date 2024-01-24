@@ -3,9 +3,10 @@ import * as THREE from 'three';
 import { IGatsbyImageData } from 'gatsby-plugin-image';
 
 import { useCardboard, useControls, useMusic, useFullscreen } from './hook';
-import { getPainting, getWall } from './blocks';
+import { getPainting, getWalls } from './blocks';
 import { StyledVirtualGallery } from './StyledVirtualGallery';
 import { HUD } from './components';
+import { getGalleryMap } from './galleryMap';
 
 let camera: THREE.Camera;
 let scene: THREE.Scene;
@@ -24,6 +25,15 @@ type Props = {
   locution: string;
 };
 
+const wallPath = new THREE.Path();
+wallPath.moveTo(-1, -1);
+wallPath.lineTo(1, -1);
+wallPath.lineTo(1, 1);
+wallPath.lineTo(-1, 1);
+wallPath.lineTo(-1, -1);
+
+const padding = 50; // padding between pictures
+
 export const VirtualGallery: React.FC<Props> = ({ artwork, music }) => {
   const ref = React.useRef(null);
 
@@ -38,6 +48,7 @@ export const VirtualGallery: React.FC<Props> = ({ artwork, music }) => {
       ),
     [],
   );
+  camera.translateY(170);
   renderer = React.useMemo(
     () => new THREE.WebGLRenderer({ antialias: true, alpha: true }),
     [],
@@ -56,16 +67,36 @@ export const VirtualGallery: React.FC<Props> = ({ artwork, music }) => {
 
   React.useEffect(() => {
     if (ref.current) {
-      for (const item of artwork) {
-        const group = getPainting(item);
-        scene.add(group);
-      }
-      const wall = getWall();
-      scene.add(wall);
+      // The new walls
+      // const pictureLen =
+      //   artwork.reduce((prev, curr) => prev + curr.width, 0) +
+      //   artwork.length * padding;
+      // const wallsLen = wallPath.getLength();
+      // const factor = Math.ceil(pictureLen / wallsLen);
+      const scaledWallPath = new THREE.Path(
+        wallPath.getPoints().map((p) => p.multiplyScalar(501)),
+      );
 
-      // camera.position.z = 125;
-      // camera.position.x = -150;
-      // camera.rotation.y = -Math.PI / 6;
+      const material = new THREE.MeshBasicMaterial({
+        color: '#eee',
+        side: THREE.DoubleSide,
+      });
+
+      scene.add(getWalls(scaledWallPath, material));
+
+      // Paintings
+
+      const galleryMap = getGalleryMap(500);
+      artwork.forEach((item) => {
+        const painting = getPainting(item);
+        const gm = galleryMap[item.title];
+        painting.position.x = gm.position.x;
+        painting.position.z = gm.position.z;
+        painting.rotation.y = gm.rotation;
+        scene.add(painting);
+      });
+
+      // console.log(pictureLen, wallsLen, factor, scaledWallPath.getLength());
     }
   }, []);
 
