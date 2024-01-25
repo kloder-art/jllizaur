@@ -103,6 +103,23 @@ export class FirstPersonCamera {
   }
 
   private updateRotation() {
+    if (
+      this.input.current.alpha !== 0 ||
+      this.input.current.beta !== 0 ||
+      this.input.current.gamma !== 0
+    ) {
+      const rad = Math.PI / 180;
+      this.rotation.copy(
+        new THREE.Quaternion().setFromEuler(
+          new THREE.Euler(
+            this.input.current.alpha * rad,
+            this.input.current.beta * rad,
+            this.input.current.gamma * rad,
+          ),
+        ),
+      );
+      return;
+    }
     const xh = this.input.current.mouseXDelta / window.innerWidth;
     const yh = this.input.current.mouseYDelta / window.innerHeight;
 

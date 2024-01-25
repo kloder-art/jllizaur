@@ -79,7 +79,6 @@ export class InputController {
     this.current.alpha = e.alpha;
     this.current.beta = e.beta;
     this.current.gamma = e.gamma;
-    console.log(this.current);
   }
 
   private onMouseMove(e: MouseEvent) {
