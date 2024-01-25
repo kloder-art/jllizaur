@@ -1,11 +1,15 @@
 import * as React from 'react';
+import { MdFullscreen, MdFullscreenExit } from 'react-icons/md';
+
+import { IconButton } from '../IconButton';
+import { GalleryOptionsContext } from '../../context';
 
 type Props = {
   startAsFullscreen?: boolean;
 };
 
-export const useFullscreen = ({ startAsFullscreen = false }: Props = {}) => {
-  const [fullscreen, setFullscreen] = React.useState(startAsFullscreen);
+export const FullScreenButton: React.FC<Props> = () => {
+  const { fullscreen, setFullscreen } = React.useContext(GalleryOptionsContext);
 
   const toggle = React.useCallback(() => {
     setFullscreen((prev) => !prev);
@@ -33,5 +37,13 @@ export const useFullscreen = ({ startAsFullscreen = false }: Props = {}) => {
     }
   }, [fullscreen]);
 
-  return { fullscreen, toggle };
+  return (
+    <IconButton
+      onClick={() => {
+        toggle();
+      }}
+    >
+      {fullscreen ? <MdFullscreenExit /> : <MdFullscreen />}
+    </IconButton>
+  );
 };

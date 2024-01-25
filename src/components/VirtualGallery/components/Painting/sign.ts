@@ -1,4 +1,4 @@
-export const makeLabelCanvas = ({
+export const getSignCanvas = ({
   size,
   title,
   subtitle,
