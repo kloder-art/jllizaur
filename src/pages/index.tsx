@@ -13,6 +13,7 @@ import {
   GalleryItem,
 } from '../components';
 import { IconButton } from '../components/VirtualGallery/components';
+import { Col, Row } from 'react-grid-system';
 
 type Props = {
   data: {
@@ -43,18 +44,21 @@ const IndexPage: React.FC<Props> = ({
         return (
           <Section key={section.frontmatter.id}>
             <Container>
-              <h2>
-                {section.frontmatter.title}{' '}
-                {section.frontmatter.title === 'El principio de Arquímedes' ? (
-                  <span style={{ float: 'right' }}>
+              <Row justify={'between'}>
+                <Col>
+                  <h2>{section.frontmatter.title} </h2>
+                </Col>
+                <Col xs={'content'}>
+                  {section.frontmatter.title ===
+                  'El principio de Arquímedes' ? (
                     <Link to="/el-principio-de-arquimedes/">
                       <IconButton>
                         <TbCardboards size={'1.5rem'} />
                       </IconButton>
                     </Link>
-                  </span>
-                ) : null}
-              </h2>
+                  ) : null}
+                </Col>
+              </Row>
               {section.html && (
                 <p
                   dangerouslySetInnerHTML={{
