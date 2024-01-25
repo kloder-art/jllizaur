@@ -1,6 +1,7 @@
 import React from 'react';
-import { graphql } from 'gatsby';
+import { Link, graphql } from 'gatsby';
 import { getSrc } from 'gatsby-plugin-image';
+import { TbCardboards } from 'react-icons/tb';
 
 import { GalleryType } from '../declaration';
 import {
@@ -11,6 +12,7 @@ import {
   Gallery,
   GalleryItem,
 } from '../components';
+import { IconButton } from '../components/VirtualGallery/components';
 
 type Props = {
   data: {
@@ -41,7 +43,18 @@ const IndexPage: React.FC<Props> = ({
         return (
           <Section key={section.frontmatter.id}>
             <Container>
-              <h2>{section.frontmatter.title}</h2>
+              <h2>
+                {section.frontmatter.title}{' '}
+                {section.frontmatter.title === 'El principio de Arquímedes' ? (
+                  <span style={{ float: 'right' }}>
+                    <Link to="/el-principio-de-arquimedes/">
+                      <IconButton>
+                        <TbCardboards size={'1.5rem'} />
+                      </IconButton>
+                    </Link>
+                  </span>
+                ) : null}
+              </h2>
               {section.html && (
                 <p
                   dangerouslySetInnerHTML={{

@@ -3,7 +3,7 @@ import * as React from 'react';
 import { StyledIconButton } from './StyledIconButton';
 
 type Props = {
-  onClick: () => void;
+  onClick?: () => void;
   children: React.ReactNode;
 };
 
