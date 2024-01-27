@@ -51,7 +51,7 @@ const IndexPage: React.FC<Props> = ({
                 <Col xs={'content'}>
                   {section.frontmatter.title ===
                   'El principio de Arquímedes' ? (
-                    <Link to="/el-principio-de-arquimedes/">
+                    <Link to="/el-principio-de-arquimedes-vr/">
                       <IconButton>
                         <TbCardboards size={'1.5rem'} />
                       </IconButton>

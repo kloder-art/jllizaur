@@ -93,4 +93,4 @@ export const query = graphql`
   }
 `;
 
-export const Head = () => <SEO title="🖼️ El principio de Arquímedes" />;
+export const Head = () => <SEO title="🖼️ El principio de Arquímedes VR" />;
