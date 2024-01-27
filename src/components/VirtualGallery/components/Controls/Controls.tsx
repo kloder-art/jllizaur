@@ -67,6 +67,7 @@ export const Controls = () => {
     const onDeviceOrientation = getOnDeviceOrientation(
       deviceOrientationState.current,
     );
+    onOrientationChange();
     document.addEventListener('mousedown', onMouseDown);
     document.addEventListener('mousemove', onMouseMove);
     document.addEventListener('mouseup', onMouseUp);
