@@ -1,4 +1,5 @@
 import * as React from 'react';
+import { getIsMobile } from '../mobile';
 
 type ContextProps = {
   music: boolean;
@@ -22,12 +23,14 @@ type Props = {
   children: React.ReactNode;
 };
 
+const isMobile = getIsMobile();
+
 export const GalleryOptionsContextProvider: React.FC<Props> = ({
   children,
 }) => {
   const [music, setMusic] = React.useState(true);
-  const [cardboard, setCardboard] = React.useState(true);
-  const [fullscreen, setFullscreen] = React.useState(false);
+  const [cardboard, setCardboard] = React.useState(isMobile);
+  const [fullscreen, setFullscreen] = React.useState(isMobile);
 
   return (
     <GalleryOptionsContext.Provider
